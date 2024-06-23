@@ -1,0 +1,52 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/default.astro";
+
+export const getStaticPaths = (async () => {
+	const pages = await getCollection("pages");
+
+	return pages.map((page) => ({
+		params: {
+			slug: page.slug
+		},
+		props: {
+			page
+		}
+	}));
+}) satisfies GetStaticPaths;
+
+interface Props {
+	page: CollectionEntry<"pages">
+}
+
+const { page } = Astro.props;
+const { Content } = await page.render()
+const pageFileName = Astro.url.pathname === "/" ? "/index" : Astro.url.pathname;
+
+const editUrl = "https://github.com/notangelmario/ciorogarla.eu.org/edit/main/src/pages" + pageFileName + ".md";
+---
+
+<Layout
+	title={page.data.title}
+>
+	{page.data.underConstruction ?
+		<p class="flex flex-row items-center gap-2 text-base-content/50">
+			<span class="material-symbols-outlined">
+				construction
+			</span>
+			Aceasta pagina este in constructie.
+		</p >
+	: null}
+	<main class="prose lg:prose-lg dark:prose-invert  prose-img:rounded-box">
+		<Content/>
+	</main>
+	<a class="btn btn-link no-underline hover:no-underline" href={editUrl} target="_blank">
+		<span class="material-symbols-outlined">
+			edit
+		</span>
+		<span class="underline">
+			Editeaza aceasta pagina pe GitHub.
+		</span>
+	</a>
+</Layout>
