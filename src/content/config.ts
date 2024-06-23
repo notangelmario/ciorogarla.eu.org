@@ -5,5 +5,8 @@ const pages = defineCollection({
     schema: ({ image }) => z.object({
 		title: z.string(),
 		underConstruction: z.boolean().optional(),
+		cover: image().optional()
     })
 })
+
+export const collections = { pages }

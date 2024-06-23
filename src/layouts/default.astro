@@ -1,6 +1,8 @@
 ---
 import "@/styles/global.css";
 import Footer from "@/components/footer.astro";
+import Navbar from "@/components/navbar.astro";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
 	title?: string;
@@ -17,9 +19,14 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+		<ViewTransitions />
 	</head>
-	<body class="max-w-screen-lg mx-auto p-8">
-		<slot/>
+	<body class="flex flex-col min-h-screen">
+		<Navbar />
+		<main class="flex-1 w-full max-w-screen-lg mx-auto p-8 pt-0">
+			<slot/>
+		</main>
 		<Footer />
 	</body>
 </html>

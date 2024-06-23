@@ -2,13 +2,15 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "@/layouts/default.astro";
+import { Image } from "astro:assets";
 
 export const getStaticPaths = (async () => {
 	const pages = await getCollection("pages");
 
 	return pages.map((page) => ({
 		params: {
-			slug: page.slug
+			// Support for /index pages
+			slug: page.slug.endsWith("index") ? page.slug.replaceAll("index", "") : page.slug
 		},
 		props: {
 			page
@@ -21,15 +23,22 @@ interface Props {
 }
 
 const { page } = Astro.props;
-const { Content } = await page.render()
+const { Content } = await page.render();
 const pageFileName = Astro.url.pathname === "/" ? "/index" : Astro.url.pathname;
 
-const editUrl = "https://github.com/notangelmario/ciorogarla.eu.org/edit/main/src/pages" + pageFileName + ".md";
+const editUrl = "https://github.com/notangelmario/ciorogarla.eu.org/edit/main/src/content/pages" + pageFileName + ".md";
 ---
 
 <Layout
 	title={page.data.title}
 >
+	{page.data.cover ?
+		<Image
+			src={page.data.cover}
+			alt={page.data.title}
+			class="w-full h-48 md:h-96 object-cover object-center rounded-box mb-4"
+		/>
+	: null}
 	{page.data.underConstruction ?
 		<p class="flex flex-row items-center gap-2 text-base-content/50">
 			<span class="material-symbols-outlined">
@@ -38,9 +47,9 @@ const editUrl = "https://github.com/notangelmario/ciorogarla.eu.org/edit/main/sr
 			Aceasta pagina este in constructie.
 		</p >
 	: null}
-	<main class="prose lg:prose-lg dark:prose-invert  prose-img:rounded-box">
+	<div class="prose lg:prose-lg dark:prose-invert max-w-none prose-img:rounded-box">
 		<Content/>
-	</main>
+	</div>
 	<a class="btn btn-link no-underline hover:no-underline" href={editUrl} target="_blank">
 		<span class="material-symbols-outlined">
 			edit
