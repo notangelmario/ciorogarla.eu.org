@@ -2,7 +2,6 @@
 title: Mănăstirea Samurcășești
 cover: "@/assets/manastire/overview.jpg"
 underConstruction: true
-date: 2024-05-05
 ---
 
 Mănăstirea Samurcășești, denumită și Mănăstirea Ciorogârla, este o mănăstire ortodoxă din România situată în comuna Ciorogârla, județul Ilfov, în apropiere de râul Ciorogârla
