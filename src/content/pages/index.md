@@ -2,8 +2,6 @@
 title: ciorogarla.eu.org
 ---
 
-# ciorogarla.eu.org
-
 👋 Bun venit pe site-ul ciorogarla.eu.org! Acest site este un portal web dedicat comunei Ciorogârla, județul Ilfov, România.
 
 ## Ce este Ciorogârla?
@@ -29,6 +27,10 @@ De asemenea poate fi folosit ca subdomeniu pentru site-ul tău, de exemplu: `sit
 ## Cum pot obține un subdomeniu?
 
 Dacă ești interesat de un subdomeniu pe ciorogarla.eu.org, poți trimite un email la [hello@notangelmario.dev](mailto:hello@notangelmario.dev) cu detaiile tale.
+
+## Ce s-a intamplat cu vechiul site?
+
+Vechiul site, cunoscut si ca "Platforma Ciorogârla" sau "Ciorogârla Unită", a fost închis în 2024 pentru a face loc unui nou proiect. Acest site este un proiect nou, independent.
 
 ## Cum pot contribui?
 

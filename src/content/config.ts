@@ -5,7 +5,8 @@ const pages = defineCollection({
     schema: ({ image }) => z.object({
 		title: z.string(),
 		underConstruction: z.boolean().optional(),
-		cover: image().optional()
+		cover: image().optional(),
+		date: z.date().optional()
     })
 })
 

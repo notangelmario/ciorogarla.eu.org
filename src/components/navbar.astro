@@ -1,5 +1,23 @@
-<nav class="flex flex-row max-w-screen-lg mx-auto w-full px-8">
-	<a href="/" class="btn btn-link">
+---
+import { Image } from "astro:assets";
+
+const path = Astro.url.pathname;
+---
+
+<nav
+	class="flex flex-row max-w-screen-lg mx-auto w-full px-8 py-2 mb-4"
+>
+	<a
+		href="/"
+		class:list={["btn btn-sm", path === "/" ? "btn-outline" : "btn-link"]}
+	>
+		<Image
+			src={import("@/assets/logo.png")}
+			alt="Logo"
+			width={16}
+			height={16}
+			class="rounded-full"
+		/>
 		Acasa
 	</a>
 </nav>

@@ -39,15 +39,30 @@ const editUrl = "https://github.com/notangelmario/ciorogarla.eu.org/edit/main/sr
 			class="w-full h-48 md:h-96 object-cover object-center rounded-box mb-4"
 		/>
 	: null}
+	<h1 class="text-5xl font-bold mb-2">
+		{page.data.title}
+	</h1>
+	{page.data.date ?
+		<p class="flex flex-row items-center gap-2 text-base-content/50">
+			<span class="material-symbols-outlined">
+				calendar_month
+			</span>
+			{page.data.date.toLocaleString("ro-RO", {
+				year: "numeric",
+				month: "long",
+				day: "numeric"
+			})}
+		</p>
+	: null}
 	{page.data.underConstruction ?
 		<p class="flex flex-row items-center gap-2 text-base-content/50">
 			<span class="material-symbols-outlined">
 				construction
 			</span>
 			Aceasta pagina este in constructie.
-		</p >
+		</p>
 	: null}
-	<div class="prose lg:prose-lg dark:prose-invert max-w-none prose-img:rounded-box">
+	<div class="mt-8 prose lg:prose-lg dark:prose-invert max-w-none prose-img:rounded-box">
 		<Content/>
 	</div>
 	<a class="btn btn-link no-underline hover:no-underline" href={editUrl} target="_blank">
