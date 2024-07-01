@@ -26,7 +26,7 @@ const { page } = Astro.props;
 const { Content } = await page.render();
 const pageFileName = Astro.url.pathname === "/" ? "/index" : Astro.url.pathname;
 
-const editUrl = "https://github.com/notangelmario/ciorogarla.eu.org/edit/main/src/content/pages" + pageFileName + ".md";
+const editUrl = "https://github.com/roseto/ciorogarla.eu.org/edit/main/src/content/pages" + pageFileName + ".md";
 ---
 
 <Layout

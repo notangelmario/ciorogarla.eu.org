@@ -13,6 +13,7 @@ export default defineConfig({
   security: {
     checkOrigin: true
   },
+  site: "https://ciorogarla.eu.org",
   integrations: [tailwind({
     applyBaseStyles: false
   }), svelte(), mdx()],
