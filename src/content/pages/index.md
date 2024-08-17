@@ -26,7 +26,7 @@ De asemenea poate fi folosit ca subdomeniu pentru site-ul tău, de exemplu: `sit
 
 ## Cum pot obține un subdomeniu?
 
-Dacă ești interesat de un subdomeniu pe ciorogarla.eu.org, poți trimite un email la [hello@roseto.dev](mailto:hello@roseto.dev) cu detaiile tale.
+Dacă ești interesat de un subdomeniu pe ciorogarla.eu.org, poți trimite un email la [hello@notangelmario.dev](mailto:hello@notangelmario.dev) cu detaiile tale.
 
 ## Ce s-a intamplat cu vechiul site?
 
@@ -34,6 +34,6 @@ Vechiul site, cunoscut si ca "Platforma Ciorogârla" sau "Ciorogârla Unită", a
 
 ## Cum pot contribui?
 
-ciorogarla.eu.org este un proiect open-source, iar codul sursă este disponibil pe [GitHub](https://github.com/roseto/ciorogarla.eu.org). La fiecare pagina este un buton "Editează această pagină" care te duce direct la pagina respectivă pe GitHub unde poți face modificări.
+ciorogarla.eu.org este un proiect open-source, iar codul sursă este disponibil pe [GitHub](https://github.com/notangelmario/ciorogarla.eu.org). La fiecare pagina este un buton "Editează această pagină" care te duce direct la pagina respectivă pe GitHub unde poți face modificări.
 
-In cazul în care nu ești familiar cu GitHub, poți trimite un email la [hello@roseto.dev](mailto:hello@roseto.dev) cu sugestiile tale.
+In cazul în care nu ești familiar cu GitHub, poți trimite un email la [hello@notangelmario.dev](mailto:hello@notangelmario.dev) cu sugestiile tale.

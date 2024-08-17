@@ -9,6 +9,7 @@ export default {
 		require("daisyui")
 	],
 	daisyui: {
+		logs: false,
 		themes: ["lemonade"],
 	}
 }
